@@ -1,0 +1,54 @@
+<template name="mainTemplate">
+	<h2 class="centered">This is the Main Page</h2>
+	<div class="centered">
+		<a href="/animation">Animation Page</a>
+	</div>	
+	<form>
+		<div id="container1">
+			<div id="box"></div>
+			
+		</div>
+		<div id="controls">
+			<select id="cssCategory">
+				{{#each cssCategories}}
+				  	<option value={{opt}}>{{opt}}</option>
+				{{/each}}
+			</select>			
+
+			<select id="transition">
+				{{#each transitions}}
+				  	<option value={{opt}}>{{opt}}</option>
+				{{/each}}
+			</select>
+
+			<select id="transform">
+				{{#each transforms}}
+				  	<option value={{opt}}>{{opt}}</option>
+				{{/each}}
+			</select>
+
+			<select id="filter">
+				{{#each filters}}
+				  	<option value={{opt}}>{{opt}}</option>
+				{{/each}}
+			</select>
+
+			<select id="example">
+				{{#each examples}}
+				  	<option value={{opt}}>{{opt}}</option>
+				{{/each}}
+			</select>
+
+			<span id="divEndValue">End Value: </span>
+			<input type="text" id="transitionEndValue" name="transitionEndValue">			
+			<span id="btn-container">
+				<div id="btn-submit">GO ==>></div>
+				<div id="btn-playback">Playback</div>
+				<div id="btn-stylesheet">Style</div>
+			</span>
+			<div id="styleSheetContainer">			
+				<textarea  id="cssSyleSheet" rows="6" cols="125"></textarea>
+			</div>			
+		</div>
+	</form>
+</template>
